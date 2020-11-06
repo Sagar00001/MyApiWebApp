@@ -19,6 +19,21 @@ namespace MyAPI.project.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("MyAPI.project.Models.Designation", b =>
+                {
+                    b.Property<int>("Desg_ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Desg_Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Desg_ID");
+
+                    b.ToTable("designations");
+                });
+
             modelBuilder.Entity("MyAPI.project.Models.Employee", b =>
                 {
                     b.Property<int>("ID")

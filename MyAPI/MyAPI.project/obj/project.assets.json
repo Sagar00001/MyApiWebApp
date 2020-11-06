@@ -8852,11 +8852,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\MyAPI Project\\MyAPI\\MyAPI.project\\MyAPI.project.csproj",
+      "projectUniqueName": "C:\\Users\\sagar\\Desktop\\MyApiWebApp\\MyAPI\\MyAPI.project\\MyAPI.project.csproj",
       "projectName": "MyAPI.project",
-      "projectPath": "D:\\MyAPI Project\\MyAPI\\MyAPI.project\\MyAPI.project.csproj",
+      "projectPath": "C:\\Users\\sagar\\Desktop\\MyApiWebApp\\MyAPI\\MyAPI.project\\MyAPI.project.csproj",
       "packagesPath": "C:\\Users\\sagar\\.nuget\\packages\\",
-      "outputPath": "D:\\MyAPI Project\\MyAPI\\MyAPI.project\\obj\\",
+      "outputPath": "C:\\Users\\sagar\\Desktop\\MyApiWebApp\\MyAPI\\MyAPI.project\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\sagar\\AppData\\Roaming\\NuGet\\NuGet.Config",

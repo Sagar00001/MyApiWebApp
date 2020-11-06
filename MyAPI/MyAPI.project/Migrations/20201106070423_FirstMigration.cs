@@ -8,6 +8,19 @@ namespace MyAPI.project.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "designations",
+                columns: table => new
+                {
+                    Desg_ID = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Desg_Name = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_designations", x => x.Desg_ID);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "employees",
                 columns: table => new
                 {
@@ -25,6 +38,9 @@ namespace MyAPI.project.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "designations");
+
             migrationBuilder.DropTable(
                 name: "employees");
         }

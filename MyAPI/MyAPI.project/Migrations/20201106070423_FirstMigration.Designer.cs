@@ -10,7 +10,7 @@ using MyAPI.project.Data;
 namespace MyAPI.project.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20201105070946_FirstMigration")]
+    [Migration("20201106070423_FirstMigration")]
     partial class FirstMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -20,6 +20,21 @@ namespace MyAPI.project.Migrations
                 .HasAnnotation("ProductVersion", "3.1.9")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("MyAPI.project.Models.Designation", b =>
+                {
+                    b.Property<int>("Desg_ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Desg_Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Desg_ID");
+
+                    b.ToTable("designations");
+                });
 
             modelBuilder.Entity("MyAPI.project.Models.Employee", b =>
                 {
